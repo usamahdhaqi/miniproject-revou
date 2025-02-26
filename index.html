@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu</title>
+    <link rel="icon" href="asset/Logo-Mini-Project-RevoU.png" type="image/png">
+    <link href="https://fonts.cdnfonts.com/css/freemono" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="asset/Logo-Mini-Project-RevoU.png" alt="logo aplikasi" width="125">
+        <h1>Konversi Suhu</h1>
+
+        <hr>
+
+        <p>Masukkan suhu derajat <span id="unit-label">Celsius (°C)</span> ke kotak dibawah, lalu klik tombol Konversi <br> untuk mendapatkan hasil konversi dalam bentuk <span id="converted-unit-label">Fahrenheit (°F)</span>.</p>
+        
+        <br>
+
+        <label for="inputValue"><span id="unit-label-2">Celsius (°C)</span>:</label><br>
+        <textarea id="inputValue" onkeypress="return isNumberKey(event)"></textarea>
+        
+        <br>
+        <button onclick="convertWithValidation()">Konversi</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="toggleConversion(), convert()">Reverse</button>
+        
+        <br><br>
+        <label for="outputValue"><span id="converted-unit-label-2">Fahrenheit (°F)</span>:</label><br>
+        <textarea id="outputValue" readonly></textarea>
+        
+        <br><br>
+        <label for="calculation">Cara Kalkulasi:</label><br>
+        <textarea id="calculation" readonly></textarea>
+
+        <br><br><br>
+        <a href="#" id="toggle-link" onclick="toggleConversion(), reset()" title="ubah konversi">Fahrenheit ke Celsius</a>
+        
+        <hr>
+
+        <h2 id="conversion-title">Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h2>
+        <p id="conversion-formula">Suhu <em>S</em> dalam derajat Fahrenheit (°F) sama dengan suhu <em>S</em> dalam derajat Celsius (°C) <br>
+            kali 9/5 tambah <strong>32</strong>.</p>
+        <p><strong id="formula">S(°F) = (S(°C) × 9/5) + 32</strong></p>
+        <p>atau</p>
+        <p><strong id="formula-alt">S(°F) = (S(°C) × 1.8) + 32</strong></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
